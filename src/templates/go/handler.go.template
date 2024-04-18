@@ -1,0 +1,17 @@
+package handler
+
+import (
+    "{{ project_name }}/usecase"
+)
+
+type {{ handler_name }}Handler struct {
+    // TODO: Define dependencies
+}
+
+func New{{ handler_name }}Handler(/* dependencies */) *{{ handler_name }}Handler {
+    return &{{ handler_name }}Handler{
+        // TODO: Initialize dependencies
+    }
+}
+
+// TODO: Define handler methods

@@ -1,0 +1,5 @@
+package entity
+
+type {{ entity_name }} struct {
+    // TODO: Define entity fields
+}

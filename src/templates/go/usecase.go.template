@@ -1,0 +1,17 @@
+package usecase
+
+import (
+    "{{ project_name }}/entity"
+)
+
+type {{ usecase_name }}UseCase struct {
+    // TODO: Define dependencies
+}
+
+func New{{ usecase_name }}UseCase(/* dependencies */) *{{ usecase_name }}UseCase {
+    return &{{ usecase_name }}UseCase{
+        // TODO: Initialize dependencies
+    }
+}
+
+// TODO: Define use case methods

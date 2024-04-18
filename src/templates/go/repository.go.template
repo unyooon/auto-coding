@@ -1,0 +1,9 @@
+package repository
+
+import (
+    "{{ project_name }}/entity"
+)
+
+type {{ repository_name }}Repository interface {
+    // TODO: Define repository methods
+}

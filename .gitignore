@@ -78,3 +78,6 @@ cython_debug/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+
+# dotenv
+.env

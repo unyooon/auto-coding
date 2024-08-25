@@ -1,9 +1,0 @@
-# Binaries
-*.exe
-*.exe~
-
-# Temporary files
-*.tmp
-
-# Test files
-*.test

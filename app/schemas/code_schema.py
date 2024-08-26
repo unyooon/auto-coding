@@ -7,3 +7,7 @@ class CodeRequest(BaseModel):
 
 class CodeResponse(BaseModel):
     generated_code: str  # GPT-4が生成したコード
+
+
+class MarkdownRequest(BaseModel):
+    markdown: str

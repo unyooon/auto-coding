@@ -14,7 +14,7 @@ class NuxtFilePlanGenerator:
         :return: ファイルパスと説明文のリスト。
         """
         # GPTを使ってファイルと説明文のリストを生成
-        prompt = f"Given the following Markdown description, generate a list of Nuxt 3 files and components that need to be created, including the file paths and a brief description of each, in JSON format:\n\n{
+        prompt = f"The following Markdown description generates a list of Nuxt 3 files and components that need to be created in typescript, in JSON format, including the file path and a brief description of each.\n\n## Json format\n `[{file_path: str, description: str}]`\n\n## Markdown\n{
             markdown_text}"
         plan = self.gpt_service.generate_json(prompt)
 

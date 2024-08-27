@@ -26,7 +26,7 @@ class GPTModel:
             model="gpt-4o-mini",
             messages=[
                 {"role": "system",
-                    "content": "You are a handy assistant that generates json. Generate json only. Not include back quotes.\nformat is `[{file_path: str, description: str}]`"},
+                    "content": "You are a handy assistant that generates json. Generate json only. Not include back quotes."},
                 {"role": "user", "content": prompt},
             ],
             max_tokens=16384,
@@ -34,7 +34,7 @@ class GPTModel:
         )
         return response.choices[0].message.content.strip()
 
-    def generate(self, prompt: str, max_tokens: int = 150) -> str:
+    def generate(self, prompt: str) -> str:
         """
         プロンプトに基づいてテキストを生成するメソッド。
         :param prompt: テキスト生成のためのプロンプト。
@@ -49,7 +49,7 @@ class GPTModel:
                         "content": "You are a handy assistant that generates text. Generate text only. Not include back quotes."},
                     {"role": "user", "content": prompt},
                 ],
-                max_tokens=max_tokens,
+                max_tokens=16384,
                 temperature=0.7
             )
             return response.choices[0].message.content.strip()

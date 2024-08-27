@@ -11,3 +11,7 @@ class CodeResponse(BaseModel):
 
 class MarkdownRequest(BaseModel):
     markdown: str
+
+
+class FixRequest(BaseModel):
+    change_description: str

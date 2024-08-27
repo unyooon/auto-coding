@@ -88,7 +88,7 @@ class ProjectOverviewGenerator:
         :param file_path: ファイルのパス。
         :return: 生成されたファイルの説明。
         """
-        prompt = f"Describe the purpose and contents of the following file in a Nuxt.js project: {
+        prompt = f"This is a request to briefly describe the purpose and content of specific files within a Nuxt.js project in one sentence: {
             file_path}"
         description = self.gpt_service.generate_description(prompt)
         return description.strip()

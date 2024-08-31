@@ -76,8 +76,11 @@ class NuxtFileGenerator:
         """
         print(f"{file_path} を生成中...")
         # GPTを使ってコードを生成
-        prompt = f"Create the Nuxt 3 file with typescript at {
-            file_path} with the following description:\n{description}\nmarkdown:{markdown}\nReference other files to be generated:{other_files}"
+        prompt = f"Create the Nuxt3 file using typescript, tailwind at {
+            file_path} with the following description:\n"
+        f"{description}\n\n"
+        f"System design document:\n{markdown}\n\n"
+        f"Reference other files to be generated:\n{other_files}"
         code = self.gpt_service.generate_code_from_markdown(prompt)
         self.create_file(file_path, code)
         return code
